@@ -10,7 +10,13 @@
 extern "C" {
 #endif
 
-void ballsFunction(lv_event_t * e);
+void resetBackgroundButtonFunction(lv_event_t * e);
+void sliderBrightnessFunction(lv_event_t * e);
+void colorWheelFunction(lv_event_t * e);
+void sliderTimeFunction(lv_event_t * e);
+void changeColorRed(lv_event_t * e);
+void changeColorGreen(lv_event_t * e);
+void changeColorBlue(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

@@ -1,0 +1,108 @@
+Command: ninja flash
+[1/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/components/ui_comp_hook.c.obj
+[2/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/ui.c.obj
+[3/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/ui_events.c.obj
+[4/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/ui_helpers.c.obj
+[5/15] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\display_tradfri_controller\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[6/15] No install step for 'bootloader'
+[7/15] Completed 'bootloader'
+[8/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/screens/ui_Screen1.c.obj
+[9/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/display_tradfri_controller.c.obj
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c:17:20: warning: 'TRADFRI_TAG' defined but not used [-Wunused-variable]
+   17 | static const char* TRADFRI_TAG = "FRIED_DISPLAY_TRADFRI_CONTROLLER";
+      |                    ^~~~~~~~~~~
+[10/15] Linking C static library esp-idf\main\libmain.a
+[11/15] Generating esp-idf/esp_system/ld/sections.ld
+[12/15] Linking CXX executable display_tradfri_controller.elf
+[13/15] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/display_tradfri_controller.bin
+[14/15] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\display_tradfri_controller\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/partition_table/partition-table.bin C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/display_tradfri_controller.bin"
+display_tradfri_controller.bin binary size 0x12b050 bytes. Smallest app partition is 0x177000 bytes. 0x4bfb0 bytes (20%) free.
+[14/15] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build -P C:/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 display_tradfri_controller.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM5
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:1c:3c:2b:88:68
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0013bfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16487...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075fc... (100 %)
+Wrote 26240 bytes (16487 compressed) at 0x00001000 in 0.5 seconds (effective 399.7 kbit/s)...
+Hash of data verified.
+Compressed 1224784 bytes to 771309...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d02c... (4 %)
+Writing at 0x0002897f... (6 %)
+Writing at 0x0003075d... (8 %)
+Writing at 0x0003bd76... (10 %)
+Writing at 0x00041f71... (12 %)
+Writing at 0x00047703... (14 %)
+Writing at 0x0004dbf4... (16 %)
+Writing at 0x00053d1e... (18 %)
+Writing at 0x00059fc9... (20 %)
+Writing at 0x0005fb14... (22 %)
+Writing at 0x000659e8... (25 %)
+Writing at 0x0006bbfa... (27 %)
+Writing at 0x000719bc... (29 %)
+Writing at 0x00077430... (31 %)
+Writing at 0x0007ce71... (33 %)
+Writing at 0x00082c8e... (35 %)
+Writing at 0x00089014... (37 %)
+Writing at 0x0008ed46... (39 %)
+Writing at 0x0009490b... (41 %)
+Writing at 0x0009a4fc... (43 %)
+Writing at 0x000a03f9... (45 %)
+Writing at 0x000a62f0... (47 %)
+Writing at 0x000abe53... (50 %)
+Writing at 0x000b1cb4... (52 %)
+Writing at 0x000b831b... (54 %)
+Writing at 0x000be0ee... (56 %)
+Writing at 0x000c3df0... (58 %)
+Writing at 0x000c9415... (60 %)
+Writing at 0x000ce72d... (62 %)
+Writing at 0x000d439e... (64 %)
+Writing at 0x000d9f32... (66 %)
+Writing at 0x000df7d6... (68 %)
+Writing at 0x000e50f9... (70 %)
+Writing at 0x000eae39... (72 %)
+Writing at 0x000f07d2... (75 %)
+Writing at 0x000f6596... (77 %)
+Writing at 0x000fbf9c... (79 %)
+Writing at 0x00101870... (81 %)
+Writing at 0x00108bfc... (83 %)
+Writing at 0x0010e8c5... (85 %)
+Writing at 0x00116b3c... (87 %)
+Writing at 0x0011da63... (89 %)
+Writing at 0x00123735... (91 %)
+Writing at 0x001292c6... (93 %)
+Writing at 0x0012f453... (95 %)
+Writing at 0x00134e6d... (97 %)
+Writing at 0x0013a744... (100 %)
+Wrote 1224784 bytes (771309 compressed) at 0x00010000 in 17.4 seconds (effective 562.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 1263.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

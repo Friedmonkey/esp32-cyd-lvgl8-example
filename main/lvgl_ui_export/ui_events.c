@@ -9,3 +9,43 @@ void ballsFunction(lv_event_t * e)
 {
 	// Your code here
 }
+
+void sliderBrightnessFunction(lv_event_t * e)
+{
+	// Your code here
+}
+
+void colorWheelFunction(lv_event_t * e)
+{
+	// Your code here
+}
+
+void resetBackgroundButtonFunction(lv_event_t * e)
+{
+	// Your code here
+}
+
+void changeColorRed(lv_event_t * e)
+{
+	// Your code here
+}
+
+void changeColorGreen(lv_event_t * e)
+{
+	// Your code here
+}
+
+void changeColorBlue(lv_event_t * e)
+{
+	// Your code here
+}
+
+void sliderTimeFunction(lv_event_t * e)
+{
+	// Your code here
+}
+
+void colorWheelReleaseFunction(lv_event_t * e)
+{
+	// Your code here
+}

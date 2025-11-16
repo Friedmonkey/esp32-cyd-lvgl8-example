@@ -9,6 +9,9 @@ set(MY_LIBS_FOLDER "C:/Users/marti/Documents/esp-projects/.libraries")
 
 set(MY_COMPONENTS
     ${MY_LIBS_FOLDER}/fried_esp_cyd_screen_lvgl8
+    ${MY_LIBS_FOLDER}/fried_tradfri_client
+    ${MY_LIBS_FOLDER}/fried_coaps_client
+    ${MY_LIBS_FOLDER}/fdata
 )
 
 # ---------------------------

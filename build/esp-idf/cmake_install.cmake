@@ -602,3 +602,23 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/esp-idf/fried_esp_cyd_screen_lvgl8/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/esp-idf/espressif__coap/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/esp-idf/fried_coaps_client/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/esp-idf/fdata/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/esp-idf/fried_tradfri_client/cmake_install.cmake")
+endif()
+

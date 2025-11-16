@@ -1,0 +1,113 @@
+Command: ninja flash
+[1/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/components/ui_comp_hook.c.obj
+[2/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/screens/ui_Screen1.c.obj
+[3/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/ui.c.obj
+[4/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/ui_helpers.c.obj
+[5/15] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\display_tradfri_controller\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[6/15] No install step for 'bootloader'
+[7/15] Completed 'bootloader'
+[8/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_ui_export/ui_events.c.obj
+[9/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/display_tradfri_controller.c.obj
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c: In function 'SetColorFromColor':
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c:94:19: warning: unused variable 'screen' [-Wunused-variable]
+   94 |         lv_obj_t* screen = lv_scr_act();
+      |                   ^~~~~~
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c: At top level:
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c:17:20: warning: 'TRADFRI_TAG' defined but not used [-Wunused-variable]
+   17 | static const char* TRADFRI_TAG = "FRIED_DISPLAY_TRADFRI_CONTROLLER";
+      |                    ^~~~~~~~~~~
+[10/15] Linking C static library esp-idf\main\libmain.a
+[11/15] Generating esp-idf/esp_system/ld/sections.ld
+[12/15] Linking CXX executable display_tradfri_controller.elf
+[13/15] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/display_tradfri_controller.bin
+[14/15] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\display_tradfri_controller\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/partition_table/partition-table.bin C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/display_tradfri_controller.bin"
+display_tradfri_controller.bin binary size 0x12b050 bytes. Smallest app partition is 0x177000 bytes. 0x4bfb0 bytes (20%) free.
+[14/15] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build -P C:/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 display_tradfri_controller.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM5
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:1c:3c:2b:88:68
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0013bfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16487...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075fc... (100 %)
+Wrote 26240 bytes (16487 compressed) at 0x00001000 in 0.5 seconds (effective 402.5 kbit/s)...
+Hash of data verified.
+Compressed 1224784 bytes to 771294...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d050... (4 %)
+Writing at 0x0002896f... (6 %)
+Writing at 0x0003074f... (8 %)
+Writing at 0x0003bd43... (10 %)
+Writing at 0x00041f5f... (12 %)
+Writing at 0x000476f2... (14 %)
+Writing at 0x0004dbf2... (16 %)
+Writing at 0x00053d2a... (18 %)
+Writing at 0x00059fdf... (20 %)
+Writing at 0x0005fb30... (22 %)
+Writing at 0x000659f8... (25 %)
+Writing at 0x0006bc0f... (27 %)
+Writing at 0x000719c8... (29 %)
+Writing at 0x00077441... (31 %)
+Writing at 0x0007ce8b... (33 %)
+Writing at 0x00082ca2... (35 %)
+Writing at 0x0008901d... (37 %)
+Writing at 0x0008ed5f... (39 %)
+Writing at 0x00094918... (41 %)
+Writing at 0x0009a4bf... (43 %)
+Writing at 0x000a0406... (45 %)
+Writing at 0x000a62fc... (47 %)
+Writing at 0x000abe64... (50 %)
+Writing at 0x000b1cc1... (52 %)
+Writing at 0x000b832a... (54 %)
+Writing at 0x000be0f8... (56 %)
+Writing at 0x000c3df4... (58 %)
+Writing at 0x000c9416... (60 %)
+Writing at 0x000ce73c... (62 %)
+Writing at 0x000d43a9... (64 %)
+Writing at 0x000d9f44... (66 %)
+Writing at 0x000df7f0... (68 %)
+Writing at 0x000e5115... (70 %)
+Writing at 0x000eae54... (72 %)
+Writing at 0x000f07ed... (75 %)
+Writing at 0x000f65b2... (77 %)
+Writing at 0x000fbfb1... (79 %)
+Writing at 0x00101882... (81 %)
+Writing at 0x00108c0f... (83 %)
+Writing at 0x0010e8db... (85 %)
+Writing at 0x00116b51... (87 %)
+Writing at 0x0011da7f... (89 %)
+Writing at 0x0012374b... (91 %)
+Writing at 0x001292de... (93 %)
+Writing at 0x0012f46d... (95 %)
+Writing at 0x00134e7c... (97 %)
+Writing at 0x0013a75c... (100 %)
+Wrote 1224784 bytes (771294 compressed) at 0x00010000 in 17.4 seconds (effective 562.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 1243.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

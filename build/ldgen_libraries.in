@@ -171,3 +171,11 @@ $<TARGET_FILE:lvgl_port_lib>
 $<TARGET_FILE:idf::fried_esp_cyd_screen_lvgl8>
 $<TARGET_FILE:__idf_atanisoft__esp_lcd_touch_xpt2046>
 $<TARGET_FILE:__idf_espressif__esp_lcd_ili9341>
+$<TARGET_FILE:idf::espressif__coap>
+$<TARGET_FILE:idf::fried_coaps_client>
+$<TARGET_FILE:__idf_espressif__coap>
+$<TARGET_FILE:__idf_protocol_examples_common>
+$<TARGET_FILE:idf::fdata>
+$<TARGET_FILE:idf::fried_tradfri_client>
+$<TARGET_FILE:__idf_fried_coaps_client>
+$<TARGET_FILE:__idf_fdata>

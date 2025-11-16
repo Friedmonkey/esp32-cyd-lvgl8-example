@@ -4,6 +4,7 @@ file(GLOB_RECURSE UI_SOURCES "lvgl_ui_export/*.c")
 idf_component_register(
     SRCS
         display_tradfri_controller.c
+        controller_queue.c
         ${UI_SOURCES}
     INCLUDE_DIRS
         "."
