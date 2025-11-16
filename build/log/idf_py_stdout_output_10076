@@ -1,0 +1,76 @@
+Command: ninja flash
+[1/12] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\display_tradfri_controller\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Completed 'bootloader'
+[4/12] Building C object esp-idf/fried_esp_cyd_screen_lvgl8/CMakeFiles/__idf_fried_esp_cyd_screen_lvgl8.dir/src/fried_esp_cyd_screen.c.obj
+[5/12] Linking C static library esp-idf\fried_esp_cyd_screen_lvgl8\libfried_esp_cyd_screen_lvgl8.a
+[6/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/display_tradfri_controller.c.obj
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c:57:13: warning: 'controller_main' defined but not used [-Wunused-function]
+   57 | static void controller_main(void *p)
+      |             ^~~~~~~~~~~~~~~
+C:/Users/marti/Documents/esp-projects/display_tradfri_controller/main/display_tradfri_controller.c:44:13: warning: 'on_click' defined but not used [-Wunused-function]
+   44 | static void on_click(lv_event_t* e)
+      |             ^~~~~~~~
+[7/12] Linking C static library esp-idf\main\libmain.a
+[8/12] Generating esp-idf/esp_system/ld/sections.ld
+[9/12] Linking CXX executable display_tradfri_controller.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/display_tradfri_controller.bin
+[11/12] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\marti\Documents\esp-projects\display_tradfri_controller\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/partition_table/partition-table.bin C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build/display_tradfri_controller.bin"
+display_tradfri_controller.bin binary size 0x6b9f0 bytes. Smallest app partition is 0x100000 bytes. 0x94610 bytes (58%) free.
+[11/12] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/marti/Documents/esp-projects/display_tradfri_controller/build -P C:/Espressif/frameworks/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 display_tradfri_controller.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port COM5
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:1c:3c:2b:88:68
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0007bfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16486...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075fc... (100 %)
+Wrote 26240 bytes (16486 compressed) at 0x00001000 in 0.5 seconds (effective 404.6 kbit/s)...
+Hash of data verified.
+Compressed 440816 bytes to 261296...
+Writing at 0x00010000... (6 %)
+Writing at 0x0001cce6... (12 %)
+Writing at 0x00025f7b... (18 %)
+Writing at 0x0002bbde... (25 %)
+Writing at 0x00031c4e... (31 %)
+Writing at 0x0003794c... (37 %)
+Writing at 0x0003db35... (43 %)
+Writing at 0x000435e0... (50 %)
+Writing at 0x000496c7... (56 %)
+Writing at 0x0004f280... (62 %)
+Writing at 0x00054d47... (68 %)
+Writing at 0x0005ac84... (75 %)
+Writing at 0x000609ba... (81 %)
+Writing at 0x00066ee5... (87 %)
+Writing at 0x0006e7ee... (93 %)
+Writing at 0x00075a9e... (100 %)
+Wrote 440816 bytes (261296 compressed) at 0x00010000 in 6.0 seconds (effective 586.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1281.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
